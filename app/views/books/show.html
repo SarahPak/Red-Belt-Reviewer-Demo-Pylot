@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Book Page</title>
+</head>
+<body>
+	<h1>{{ book['title'] }}</h1>
+	<h3>{{ book['name'] }}</h3>
+	<hr>
+	<h1>REVIEWS:</h1>
+	{% for rev in reviews %}
+		<p>Rating: {{ rev['rating'] }}</p>
+		<p>{{ rev['name'] }} says: {{ rev['content'] }}</p>
+		<p>Posted on {{ rev['created_at'] }}</p>
+	{% endfor %}
+</body>
+</html>
